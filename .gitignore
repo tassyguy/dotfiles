@@ -1,0 +1,12 @@
+*
+
+!.gitignore
+!.zshrc
+!.bash_profile
+!.bashrc
+!.profile
+!.vimrc
+!.xonshrc
+!.zlogin
+!.zlogout
+!.zpreztorc

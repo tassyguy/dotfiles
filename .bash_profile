@@ -1,10 +1,14 @@
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
-# added by Anaconda3 5.2.0 installer
-export PATH="/Users/sphillips/anaconda3/bin:$PATH"
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/sphillips/.sdkman"
-[[ -s "/Users/sphillips/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/sphillips/.sdkman/bin/sdkman-init.sh"
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+
+# Source .profile file (will clean up)
+source ~/.profile

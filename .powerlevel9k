@@ -1,0 +1,36 @@
+POWERLEVEL9K_MODE='nerdfont-complete'
+
+prompt_zsh_showStatus () {
+  state=`osascript -e 'tell application "Spotify" to player state as string'`;
+  if [ $state = "playing" ]; then
+    artist=`osascript -e 'tell application "Spotify" to artist of current track as string'`;
+    track=`osascript -e 'tell application "Spotify" to name of current track as string'`;
+
+    echo -n "$artist - $track";
+  fi
+}
+
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+# POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+POWERLEVEL9K_NVM_BACKGROUND='28'
+POWERLEVEL9K_NVM_FOREGROUND='15'
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M \uE868  %d.%m}"
+POWERLEVEL9K_PYENV_PROMPT_ALWAYS_SHOW=true
+
+# Command auto-correction.
+ENABLE_CORRECTION="true"
+
+# Command execution time stamp shown in the history command output.
+HIST_STAMPS="mm/dd/yyyy"
+
+# User with rebellion
+user_icon() {
+    echo -n "\uf1d0 Master Simon"
+}
+
+POWERLEVEL9K_CUSTOM_USER="user_icon"
+
+# Prompt elements
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon custom_user dir dir_writable vcs newline node_version nvm php_version rbenv pyenv newline swift_version rust_version anaconda)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status zsh_showStatus background_jobs battery)

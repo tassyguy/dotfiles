@@ -25,3 +25,4 @@ export PKG_CONFIG_PATH="/usr/local/opt/openblas/lib/pkgconfig /usr/local/opt/ope
 export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include"
 
 alias lc='colorls -lA --sd --gs --tree=[2] --dark'
+alias todo='$HOME/bin/todo.py'

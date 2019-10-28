@@ -2,20 +2,7 @@
 
 !.gitignore
 !.zshrc
-!.bash_profile
+!.vimrc
 !.bashrc
 !.profile
-!.vimrc
-!.xonshrc
-!.zlogin
-!.zlogout
-!.zpreztorc
-
-!.skhdrc
-!.chunkwmrc
-!.hyper.js
-!.avnrc
-!.spacemacs
-
-!.powerlevel9k
-!Brewfile
+!.p10k.zsh

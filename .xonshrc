@@ -1,7 +1,0 @@
-# XONSH WIZARD START
-source-zsh --interactive True --login True --envcmd zsh "echo loading xonsh foreign shell"
-source-bash --envcmd bash "echo loading xonsh foreign shell"
-xontrib load apt_tabcomplete autojump autoxsh bashisms base16_shell coreutils distributed docker_tabcomplete jedi mpl prompt_ret_code whole_word_jumping scrapy_tabcomplete vox vox_tabcomplete xo xonda avox z click_tabcomplete fzf-widgets
-# XONSH WIZARD END
-
-$XONSH_SHOW_TRACEBACK = True
